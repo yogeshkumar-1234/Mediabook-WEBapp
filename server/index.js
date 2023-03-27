@@ -22,8 +22,8 @@ app.get('/', (req, res) => res.send('Hello to Memories API'))
 const PORT = process.env.PORT || 5000
 // process.env.CONNECTION_URL
 mongoose // https://www.mongodb.com/cloud/atlas
-	// .connect('mongodb+srv://Yogesh-Kumar:smHYh70lQqN0Y4bO@cluster0.spgph.mongodb.net/?retryWrites=true&w=majority')
-	.connect(process.env.MONGO_URL)
+	.connect('mongodb+srv://Yogesh-Kumar:smHYh70lQqN0Y4bO@cluster0.spgph.mongodb.net/?retryWrites=true&w=majority')
+	// .connect(process.env.MONGO_URL)
 	.then(console.log('Connected to MongoDB Database 🌐'))
 	.then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT} 🚀`)))
 	.catch((error) => console.log(`❎ Server did not connect ⚠️\n${error}`))
